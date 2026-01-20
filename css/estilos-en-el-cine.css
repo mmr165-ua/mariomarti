@@ -1,0 +1,54 @@
+header {
+    border-bottom: #F4F6F7;
+    padding-bottom: 1rem;
+    box-shadow: 0 0.15rem 0.3rem rgba(0,0,0,0.08);
+}
+
+h2 {
+    font-size: 2rem;
+    line-height: 1;
+    text-align: center;
+    margin: 0 1.5rem;
+}
+
+.en-el-cine {
+    display: flex;
+    flex-direction: column;
+}
+
+iframe {
+    width: 100%;
+    height: 200px;
+    border: none;
+}
+
+.pelicula {
+    background-color: #F4F6F7;
+    margin: 1rem;
+}
+
+cite {
+    font-weight: bold;
+    font-style: italic;
+}
+
+figcaption {
+    padding: 1rem;
+}
+
+@media (min-width: 600px) {
+    iframe{
+        height: 400px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .en-el-cine {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    }
+
+    iframe {
+        height: 280px;
+    }
+}

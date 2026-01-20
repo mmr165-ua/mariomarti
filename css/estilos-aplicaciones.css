@@ -1,0 +1,46 @@
+header {
+    border-bottom: #F4F6F7;
+    padding-bottom: 1rem;
+    box-shadow: 0 0.15rem 0.3rem rgba(0,0,0,0.08);
+}
+
+h2 {
+    font-size: 2rem;
+    margin: 1.5rem 0;
+    line-height: 1;
+    text-align: center;
+}
+
+#apps {
+    display: flex;
+    flex-direction: column;
+    margin: 1.5rem;
+    gap:2rem;
+}
+
+.app {
+    background-color: #F4F6F7;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.app>* {
+    margin: 1rem 0;
+}
+
+@media (min-width:600px) {
+    #apps{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1240px){
+    #apps{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

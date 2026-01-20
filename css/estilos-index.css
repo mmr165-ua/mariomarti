@@ -1,0 +1,340 @@
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('/source-sans-pro/SourceSansPro-Regular.otf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('/source-sans-pro/SourceSansPro-It.otf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('/source-sans-pro/SourceSansPro-Bold.otf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('/source-sans-pro/SourceSansPro-BoldIt.otf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #000000;
+    background-color: #ffff;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+hgroup {
+    display: flex;
+    gap:0.25rem;
+    align-items: center;
+}
+
+#logo h1 {
+    font-size: 3.5rem;
+} 
+
+#logo p {
+    font-size: 3.5rem;
+    font-weight: 300;
+    letter-spacing: -0.45rem;
+}
+
+#logo:hover{
+    color: rgba(0, 0, 0, 0.5);
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    list-style: none;
+    text-align: center;
+}
+
+header>a:visited{
+    color: #000000;
+}
+
+header>a {
+    text-decoration: none;
+}
+
+nav a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+nav a:hover, .activo{
+    color: rgb(222, 35, 51);
+}
+
+#presentacion {
+    position: relative;
+    width: 100%;
+}
+
+#presentacion img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#presentacion h2 {
+    position: absolute;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #FFFFFF; 
+    font-weight: 100;
+    top: 30%;
+    margin: 0 2rem;
+}
+
+#descripcion {
+    margin: 1rem;
+}
+
+#descripcion h2 {
+    font-size: 2.25rem;
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+#descripcion p {
+    margin-bottom: 0.75rem;
+}
+
+#actualidad h3 {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+#actualidad article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    padding: 0 2.5rem;    
+
+}
+
+article div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+article img {
+    width: 100%;
+    height: auto;
+}
+
+article * {
+    margin-bottom: 0.75rem;
+}
+
+
+.texto-articulo small{
+    font-size: 0.85rem;
+    margin-bottom: .5rem;
+    
+}
+
+.texto-articulo p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.texto-articulo h4 {
+    font-size: 1.2rem;
+    line-height: 1.1;
+    margin: 0.25rem 0;
+    color: rgb(222, 35, 51);
+    margin-bottom: 1rem;
+}
+div a {
+  color: rgb(222, 35, 51);
+  text-decoration: none;
+}
+
+small>a {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+small>a::before {
+    content: ">";
+    margin-right: .75rem;
+    font-weight: 400;
+}
+
+.texto-articulo a:hover, small>a:hover {
+  color: rgb(0, 0, 0);
+}
+
+footer {
+    margin-top: 3rem;
+    font-size: 0.8rem;
+    color: #FFFFFF;
+    background-color: #000000;
+    padding: 1.5rem 1rem;
+    text-align: center;
+}
+
+.menus {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.menu-legal ul{
+    flex-direction: column;
+}
+
+footer a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: rgb(222, 35, 51);
+}
+
+footer img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+footer a:hover img {
+    opacity: 0.7;
+}
+
+address {
+    font-style: normal;
+}
+
+/*Dispositivos medianos -> tablets*/
+@media (min-width: 600px) {
+    #presentacion h2 {
+        font-size: 3rem;
+        top: 25%;
+        margin: 0 2rem;
+    }
+
+    #presentacion img {
+        height: 250px;
+    }
+
+    #descripcion p {
+        font-size: 1.15rem;
+    }
+
+    #actualidad {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto auto;
+        gap: 1rem;
+        margin-bottom: 2rem;
+        margin: 1rem;
+    }
+
+    #actualidad article {
+        padding: 0;
+    }
+
+    #actualidad h3 {
+        grid-column: 1 / 4;
+    }
+
+    #descripcion, #actualidad {
+        margin: 0 2.5rem;
+    }
+}
+
+/*Dispositivos grandes -> ordenadores*/
+@media (min-width: 1024px) {
+    header, #actualidad, footer>*, #apps, .en-el-cine{
+        padding: 0 12.5rem;
+    }
+
+    #descripcion {
+        margin: 0 18rem;
+    }
+
+    header {
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: row;
+        gap: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    #presentacion img {
+        height: 300px;
+    }
+
+    #presentacion h2 {
+        font-size: 4.5rem;
+        line-height: 1;
+        top: 25%;
+        margin: 0 13.5rem;
+    }
+
+    #descripcion p {
+        font-size: 1.4rem;
+    }
+
+    footer {
+        text-align: left;
+    }
+    .menus {
+        align-items: flex-start;
+    }
+
+    .menu-legal ul{
+        flex-direction: row;
+    }
+
+    .menu-legal li:not(:last-child)::after {
+        content: "·";
+        margin: 0 .5rem;
+    }
+
+} 
